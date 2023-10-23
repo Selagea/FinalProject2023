@@ -1,0 +1,36 @@
+package testCases;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import pages.BasePage;
+import pages.ReviewProductPages;
+
+public class ReviewProductTestCase extends BasePage {
+    private ReviewProductPages reviewProductPages;
+
+    private String loginPageURL = "https://ecommerce-playground.lambdatest.io/index.php?route=account/login";
+    private String logoutPage = "https://ecommerce-playground.lambdatest.io/index.php?route=account/logout";
+
+    @BeforeClass
+    public void beforeMethod() {
+        System.out.println("Navigate to " + loginPageURL);
+        driver.get(loginPageURL);
+        driver.manage().window().fullscreen();
+        reviewProductPages = new ReviewProductPages(driver);
+    }
+    @Test
+    public void ReviewProduct() throws InterruptedException{
+        reviewProductPages.insertEmail();
+        reviewProductPages.insertPassword();
+        reviewProductPages.clickLogin();
+        Thread.sleep(1000);
+        reviewProductPages.clickHome();
+        reviewProductPages.clickOnProduct();
+        reviewProductPages.clickOnReviews();
+        Thread.sleep(3000);
+        reviewProductPages.insertYourName();
+        reviewProductPages.insertYourReview();
+        reviewProductPages.clickOnReviewButton();
+        Thread.sleep(3000);
+}
+}
