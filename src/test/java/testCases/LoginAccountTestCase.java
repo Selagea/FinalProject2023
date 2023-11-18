@@ -35,7 +35,7 @@ public class LoginAccountTestCase extends BasePage {
         String actualResultText = resultElement.getText();
         String expectedResultText = "You have been logged off your account. It is now safe to leave the computer.";
         Thread.sleep(2000);
-        Assert.assertEquals(actualResultText, expectedResultText,"Account Logout as expected");
+        Assert.assertEquals(actualResultText, expectedResultText, "Account Logout as expected");
     }
 
     @Test
@@ -45,22 +45,22 @@ public class LoginAccountTestCase extends BasePage {
         loginAccountPages.insertPassword();
         loginAccountPages.clickLogin();
 
-        WebElement resultElement = driver.findElement(By.xpath( "//div[@class='alert alert-danger alert-dismissible']"));
+        WebElement resultElement = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']"));
         String actualResultText = resultElement.getText();
         String expectedResultText = "Warning: No match for E-Mail Address and/or Password.";
         Thread.sleep(2000);
-        Assert.assertEquals(actualResultText, expectedResultText,"Displayed as expected");
+        Assert.assertEquals(actualResultText, expectedResultText, "Displayed as expected");
     }
 
     @Test
-    public void LoginAccountWithoutPassword() throws InterruptedException{
+    public void LoginAccountWithoutPassword() throws InterruptedException {
         loginAccountPages.insertEmail();
         loginAccountPages.clickLogin();
 
-        WebElement resultElement = driver.findElement(By.xpath( "//div[@class='alert alert-danger alert-dismissible']"));
+        WebElement resultElement = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']"));
         String actualResultText = resultElement.getText();
         String expectedResultText = "Warning: No match for E-Mail Address and/or Password.";
         Thread.sleep(2000);
-        Assert.assertEquals(actualResultText, expectedResultText,"Displayed as expected");
+        Assert.assertEquals(actualResultText, expectedResultText, "Displayed as expected");
     }
 }

@@ -28,12 +28,13 @@ public class ChangePasswordTestCase extends BasePage {
         changePasswordPages.insertEmail();
         changePasswordPages.setPassword();
         changePasswordPages.clickLogin();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         changePasswordPages.ClickOnPasswordButton();
         changePasswordPages.ClickOldPassword();
         changePasswordPages.ClickOldPasswordConfirm();
         changePasswordPages.clickOnContinueButton();
-        Thread.sleep(6000);
-        Assert.assertEquals("Success: Your account has been successfully updated.", "Success: Your account has been successfully updated.");
+        Thread.sleep(3000);
+
+
     }
 }

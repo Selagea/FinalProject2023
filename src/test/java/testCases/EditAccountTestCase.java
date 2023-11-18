@@ -45,7 +45,6 @@ import pages.EditAccountPages;
             WebElement resultElement = driver.findElement(By.xpath("//*[@id=\"account-account\"]/div[1]"));
             String actualResultText = resultElement.getText();
             String expectedResultText = "Success: Your account has been successfully updated.";
-            Thread.sleep(2000);
             Assert.assertEquals(actualResultText, expectedResultText,"Account updated");
             Thread.sleep(3000);
             driver.get(logoutPage);

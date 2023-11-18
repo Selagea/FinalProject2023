@@ -21,11 +21,11 @@ public class ChangePasswordPages extends BasePage {
 
     public void insertEmail() {
 
-        driver.findElement(emailInput).sendKeys("mirejadadaaaa@yahoo.com"); }
+        driver.findElement(emailInput).sendKeys("danmarta@yahoo.com"); }
 
     public void setPassword() {
 
-        driver.findElement(passwordInput).sendKeys("741741"); }
+        driver.findElement(passwordInput).sendKeys("855966"); }
     public void clickLogin() {
 
         driver.findElement(loginButton).click(); }
@@ -36,10 +36,10 @@ public class ChangePasswordPages extends BasePage {
         driver.findElement(PasswordButton).click(); }
     public void ClickOldPassword() {
 
-        driver.findElement(Password).sendKeys("741741"); }
+        driver.findElement(Password).sendKeys("855966"); }
     public void ClickOldPasswordConfirm() {
 
-        driver.findElement(PasswordConfirm).sendKeys("741741"); }
+        driver.findElement(PasswordConfirm).sendKeys("855966"); }
     public void clickOnContinueButton() {
 
         driver.findElement(continueChangePassword).click(); }
