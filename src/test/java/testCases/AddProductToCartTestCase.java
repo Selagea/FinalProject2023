@@ -33,6 +33,6 @@ public class AddProductToCartTestCase  extends BasePage {
         addProductToCartPages.clickOnAddToCartSecoundTime();
         Thread.sleep(1000);
         addProductToCartPages.clickOnCartIcon();
-        Thread.sleep(1000);
+        Thread.sleep(4000);
     }
 }

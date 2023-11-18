@@ -1,6 +1,9 @@
 package testCases;
 
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.BasePage;
@@ -30,5 +33,7 @@ public class ChangePasswordTestCase extends BasePage {
         changePasswordPages.ClickOldPassword();
         changePasswordPages.ClickOldPasswordConfirm();
         changePasswordPages.clickOnContinueButton();
+        Thread.sleep(6000);
+        Assert.assertEquals("Success: Your account has been successfully updated.", "Success: Your account has been successfully updated.");
     }
 }
