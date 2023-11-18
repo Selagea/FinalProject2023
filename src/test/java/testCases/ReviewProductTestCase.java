@@ -18,7 +18,7 @@ public class ReviewProductTestCase extends BasePage {
     public void beforeMethod() {
         System.out.println("Navigate to " + loginPageURL);
         driver.get(loginPageURL);
-        driver.manage().window().maximize();
+        driver.manage().window().fullscreen();
         reviewProductPages = new ReviewProductPages(driver);
     }
     @Test

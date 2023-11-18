@@ -21,7 +21,7 @@ public class CreateRegisterAccountTest extends BasePage {
     public void beforeMethod() {
         System.out.println("Navigate to " + registerPageURL);
 
-        driver.manage().window().maximize();
+        driver.manage().window().fullscreen();
         driver.get(registerPageURL);
         createRegisterAccountPages =  new CreateRegisterAccountPages(driver);
     }
